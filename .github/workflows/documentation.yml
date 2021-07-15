@@ -21,10 +21,9 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
-          ftp-server: ftp://159.75.114.96:21
+          ftp-server: ftp://159.75.114.96:1222
           ftp-username: ${{ secrets.ftp_user }}
           ftp-password: ${{ secrets.ftp_pwd }}
           local-dir: build/
         env:
           CI: true
-          
