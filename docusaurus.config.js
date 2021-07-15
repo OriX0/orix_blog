@@ -25,7 +25,7 @@ module.exports = {
           label: "文档",
           position: "right",
         },
-        { to: "blog", label: "随笔", position: "left" },
+        //{ to: "blog", label: "随笔", position: "left" },
         // {to: 'blog', label: '博客', position: 'left'},  看需求可以添加多个tabs
         {
           href: "https://github.com/OriX0", // 自己的github主页
@@ -44,10 +44,6 @@ module.exports = {
             {
               label: "React",
               to: "docs/React_orix",
-            },
-            {
-              label: "问题总结",
-              to: "docs/errors",
             },
           ],
         },
@@ -71,10 +67,6 @@ module.exports = {
         {
           title: "More",
           items: [
-            {
-              label: "博客",
-              to: "blog",
-            },
             {
               label: "GitHub",
               href: "https://github.com/OriX0",
