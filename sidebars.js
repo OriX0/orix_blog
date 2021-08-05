@@ -8,7 +8,12 @@ module.exports = {
      {
       type: "category", // 类别
       label: "React专题", // 一级标题
-      items: ["React_orix"], // js忍者秘籍， 你不知道的js123， js高级程序设计3
+      items: ["React_orix","React_hook"], // 
+    },
+	{
+      type: "category", // 类别
+      label: "JavaScript专题", // 一级标题
+      items: ["JavaScriptGC","JStypeConversion","JSExecutionContext","JSprototype"], // 
     },
   ],
 };
