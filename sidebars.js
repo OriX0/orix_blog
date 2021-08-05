@@ -13,7 +13,12 @@ module.exports = {
 	{
       type: "category", // 类别
       label: "JavaScript专题", // 一级标题
-      items: ["JavaScriptGC","JStypeConversion","JSExecutionContext","JSprototype"], // 
+      items: ["JStypeConversion","this","Scope","Closure","JSExecutionContext","JSprototype","Promise","JavaScriptGC"], // 
+    },
+    {
+      type: "category", // 类别
+      label: "计算机网络", // 一级标题
+      items: ["CROSS","Network"], // 
     },
   ],
 };
