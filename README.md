@@ -2,7 +2,7 @@
 
 博客使用[docsify](https://docsify.js.org/#/zh-cn/)搭建。
 
-[博客地址](blog.ori8.cn)
+[博客地址](http://blog.ori8.cn/#/)
 
 ##
 
