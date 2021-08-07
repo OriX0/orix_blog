@@ -1,9 +1,5 @@
----
-id: React_hook
-title: Hook源码
----
 
-## 0-整体前置概念
+## 整体前置概念
 
 ### react 源码分块
 
@@ -25,7 +21,7 @@ title: Hook源码
 3. 依次执行 对应的 useEffect 的`destroy`
 4. **所有**`destroy`执行完后，再依次执行**所有**`create`
 
-## 1-useEffect
+## useEffect
 
 ### 工作原理
 
@@ -46,56 +42,3 @@ title: Hook源码
 
 和`useEffect`的区别 渲染完成后同步执行
 
-## 2-useRef
-
-### 注意
-
-useRef 的更新并不会触发更新
-
-### 常见用法
-
-#### 1.多次渲染之间传递值
-
-逻辑部分
-
-```tsx
-// 逻辑部分
-const currentLikeRef = useRef(0);
-const handelClick = () => {
-  setTimeout(() => {
-    console.log(`YOU CLICK ON ${currentLikeRef.current} `);
-  }, 3000);
-};
-```
-
-DOM 部分
-
-这里是借用 `setState ` 触发更新的
-
-```tsx
-<button
-  onClick={() => {
-    setState(like + 1);
-    currentLikeRef.current++;
-  }}
->
-  赞
-</button>
-```
-
-#### 2.每次更新后触发
-
-```ts
-// 模拟componentDid Mount/update
-const didMountRef = useRef(false);
-useEffect(() => {
-  if (didMountRef.current) {
-    console.log('function component did update');
-  } else {
-    console.log('function component first mount');
-    didMountRef.current = true;
-  }
-});
-```
-
-#### 3.获取 DOM
