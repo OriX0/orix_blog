@@ -288,3 +288,92 @@
     border: 1px solid #000;
 }
 ```
+
+## 子项分组布局
+
+![image-20210914204032795](https://i.loli.net/2021/09/14/9qxJwv8taCQeUS5.png)
+
+### magin-right 实现
+
+- 父元素flex
+- 子元素分组的临界值 设置 `margin-right:auto`
+
+```html
+  <style>
+    main {
+      height: 500px;
+      display: flex;
+      background-color: skyblue;
+    }
+    main div{
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+    }
+    main div:nth-of-type(3) {
+      margin-right: auto;
+    }
+    main div:nth-of-type(6) {
+      margin-right: auto;
+    }
+    
+  </style>
+</head>
+<body>
+<main>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+</main>
+```
+
+## 等高布局
+
+![](https://i.loli.net/2021/09/16/HG4cUDoPRYnjVkQ.png)
+
+```html
+<style>
+  main {
+    display: flex;
+    background-color: skyblue;
+    width: 300px;
+  }
+  main div {
+    width: 100px;
+    background-color: pink;
+  }
+  main div:nth-of-type(1) {
+    margin-right: 25px;
+  }
+</style>
+<body>
+  <main>
+    <div>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+    </div>
+    <div >
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+    </div>
+  </main>
+</body>
+```
+
+## 粘性页脚
+
+![image-20210916194106040](https://i.loli.net/2021/09/16/lFAjhCa1IMs4Gqz.png)
+
+> - 上下定高
+> - 内容区域设置为 flex-grow:1
+
